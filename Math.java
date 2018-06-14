@@ -8,13 +8,18 @@ public class Math {
 
          try {
 
-             if (acting.equals("сумма")) return i + g;
+             if (acting.equals("сумма")) z = i + g;
 
-         } catch  (Exception e){
-             System.err.println(e.getMessage());
+         } catch  (Exception ex){
+             System.err.println(ex.getMessage());
          }
 
 
-        return i+g;
+         catch  (Error e){
+             System.err.println(e.getMessage());
+             System.out.println("Произошла ошибка но ситуация под контролем");
+         }
+
+//         return z = i + g;
     }
 }
