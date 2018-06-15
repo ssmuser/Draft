@@ -8,7 +8,8 @@ public class Math {
 
          try {
 
-             if (acting.equals("сумма")) z = i + g;
+             if (acting.equals("сумма"))
+                 z = i + g;
 
          } catch  (Exception ex){
              System.err.println(ex.getMessage());
@@ -20,6 +21,21 @@ public class Math {
              System.out.println("Произошла ошибка но ситуация под контролем");
          }
 
-//         return z = i + g;
+        return z = i + g;
     }
 }
+
+    public static int doMath2(String acting, int i, int g) throws Exception {
+        switch (acting) {
+            case "Summ":
+                return i + g;
+            case "Multiply":
+                return i * g;
+            case "Substract":
+                return i - g;
+            case "Devision":
+                return i / g;
+            default:
+                throw new Exception("Unknown operation provided");
+        }
+    }
